@@ -3,12 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Primeras Palabras - Estimulación Temprana</title>
+    <title>
+      Mis Primeras Palabras | Libro de Estimulación del Lenguaje para Bebés
+    </title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Potencia el habla de tu bebé con 'Mis Primeras Palabras'. Libro digital práctico y visual para estimular el desarrollo del lenguaje de 0 a 3 años. ¡Descarga inmediata!"
+    />
+    <meta
+      name="keywords"
+      content="estimulación temprana, lenguaje bebé, primeras palabras, aprender a hablar, libro pdf bebés, terapia lenguaje casa, desarrollo infantil, guía padres"
+    />
+    <meta name="author" content="Mis Primeras Palabras" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta
+      property="og:title"
+      content="Mis Primeras Palabras - Ayuda a tu bebé a hablar"
+    />
+    <meta
+      property="og:description"
+      content="El libro digital diseñado para padres que quieren estimular el lenguaje de sus hijos de forma natural y divertida. ¡Oferta de lanzamiento!"
+    />
+    <meta
+      property="og:image"
+      content="https://tudominio.com/imagen-portada-social.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Mis Primeras Palabras - Estimulación del Lenguaje"
+    />
+    <meta
+      property="twitter:description"
+      content="Guía práctica y libro visual para desarrollar el vocabulario de tu bebé. Ideal para padres primerizos."
+    />
+    <meta
+      property="twitter:image"
+      content="https://tudominio.com/imagen-portada-social.jpg"
+    />
+
+    <!-- Structured Data (JSON-LD) for Google Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Mis Primeras Palabras",
+        "image": ["https://tudominio.com/imagen-libro.jpg"],
+        "description": "Libro digital y guía práctica para estimular el desarrollo del lenguaje en bebés de 1 a 3 años.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Estimulación Temprana"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://tudominio.com",
+          "priceCurrency": "USD",
+          "price": "12.00",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "124"
+        }
+      }
+    </script>
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>"
     />
-    <script src="/_sdk/element_sdk.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&amp;display=swap"
       rel="stylesheet"
@@ -24,7 +96,7 @@
       }
 
       .gradient-bg {
-        background: linear-gradient(135deg, #fef7ed 0%, #fef7ed 100%);
+        background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%);
       }
 
       .card-hover {
@@ -94,7 +166,8 @@
         background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
       }
       .section-gradient {
-        background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%);
+        background: #fef7ed
+          /*linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%)*/;
       }
       .card-glow {
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
@@ -110,7 +183,6 @@
         navigation: auto;
       }
     </style>
-    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   </head>
   <body class="section-gradient">
     <!-- Promotional Banner -->
@@ -183,83 +255,15 @@
                       stroke="#E0E0E0"
                       stroke-width="2"
                     />
-                    <!-- Portada decorativa -->
-                    <rect
+                    <!-- Portada imagen -->
+                    <image
+                      href="img/libro.png"
                       x="100"
                       y="80"
                       width="200"
                       height="320"
-                      rx="8"
-                      fill="#7FC8A9"
+                      preserveAspectRatio="none"
                     />
-                    <!-- Elementos decorativos en portada -->
-                    <circle
-                      cx="200"
-                      cy="150"
-                      r="40"
-                      fill="#FFFFFF"
-                      opacity="0.9"
-                    />
-                    <text
-                      x="200"
-                      y="160"
-                      text-anchor="middle"
-                      font-size="32"
-                      fill="#7FC8A9"
-                    >
-                      🗣️
-                    </text>
-                    <text
-                      x="200"
-                      y="240"
-                      text-anchor="middle"
-                      font-size="24"
-                      font-weight="bold"
-                      fill="#FFFFFF"
-                    >
-                      MIS PRIMERAS
-                    </text>
-                    <text
-                      x="200"
-                      y="270"
-                      text-anchor="middle"
-                      font-size="24"
-                      font-weight="bold"
-                      fill="#FFFFFF"
-                    >
-                      PALABRAS
-                    </text>
-                    <!-- Iconos decorativos -->
-                    <circle
-                      cx="130"
-                      cy="340"
-                      r="15"
-                      fill="#FFFFFF"
-                      opacity="0.8"
-                    />
-                    <text x="130" y="347" text-anchor="middle" font-size="16">
-                      🎨
-                    </text>
-                    <circle
-                      cx="200"
-                      cy="340"
-                      r="15"
-                      fill="#FFFFFF"
-                      opacity="0.8"
-                    />
-                    <text x="200" y="347" text-anchor="middle" font-size="16">
-                      📚
-                    </text>
-                    <circle
-                      cx="270"
-                      cy="340"
-                      r="15"
-                      fill="#FFFFFF"
-                      opacity="0.8"
-                    />
-                    <text x="270" y="347" text-anchor="middle" font-size="16">
-                      🧸
-                    </text>
                     <!-- Lomo del libro -->
                     <rect
                       x="70"
@@ -285,40 +289,13 @@
                         rx="8"
                         fill="#2E2E2E"
                       />
-                      <rect
+                      <image
+                        href="img/tablet.png"
                         x="10"
                         y="15"
                         width="100"
                         height="130"
-                        rx="4"
-                        fill="#FFFFFF"
-                      />
-                      <text x="60" y="50" text-anchor="middle" font-size="32">
-                        📖
-                      </text>
-                      <rect
-                        x="20"
-                        y="70"
-                        width="80"
-                        height="4"
-                        rx="2"
-                        fill="#E0E0E0"
-                      />
-                      <rect
-                        x="20"
-                        y="80"
-                        width="60"
-                        height="4"
-                        rx="2"
-                        fill="#E0E0E0"
-                      />
-                      <rect
-                        x="20"
-                        y="90"
-                        width="70"
-                        height="4"
-                        rx="2"
-                        fill="#E0E0E0"
+                        preserveAspectRatio="none"
                       />
                     </svg>
                   </div>
@@ -343,7 +320,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Ideal para bebés y niños pequeños en etapa de estimulación del
-                lenguaje
+                lenguaje.
               </p>
             </div>
             <div
@@ -356,7 +333,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Libro digital ilustrado, fácil de usar desde cualquier
-                dispositivo
+                dispositivo.
               </p>
             </div>
             <div
@@ -369,7 +346,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Diseñado para ampliar el vocabulario mediante imágenes,
-                observación y señalamiento
+                observación y señalamiento.
               </p>
             </div>
             <div
@@ -381,7 +358,8 @@
                 Desde casa
               </h3>
               <p style="color: #5f5f5f">
-                Pensado para acompañar el aprendizaje diario junto a mamá y papá
+                Pensado para acompañar el aprendizaje diario junto a mamá y
+                papá.
               </p>
             </div>
             <div
@@ -393,7 +371,7 @@
                 A tu ritmo
               </h3>
               <p style="color: #5f5f5f">
-                No tiene horarios ni tiempos estrictos, se adapta a cada niño
+                No tiene horarios ni tiempos estrictos, se adapta a cada niño.
               </p>
             </div>
             <div
@@ -404,7 +382,7 @@
               <h3 class="font-semibold text-lg mb-2" style="color: #2e2e2e">
                 Acceso
               </h3>
-              <p style="color: #5f5f5f">Descarga inmediata tras la compra</p>
+              <p style="color: #5f5f5f">Descarga inmediata tras la compra.</p>
             </div>
           </div>
         </div>
@@ -445,7 +423,7 @@
               <div class="text-2xl">😟</div>
               <p style="color: #5f5f5f">
                 <strong>No sabes si está hablando lo suficiente</strong> para su
-                edad y quieres acompañar su desarrollo de forma adecuada
+                edad y quieres acompañar su desarrollo de forma adecuada.
               </p>
             </div>
             <div
@@ -455,7 +433,7 @@
               <div class="text-2xl">⏰</div>
               <p style="color: #5f5f5f">
                 <strong>Tienes poco tiempo,</strong> pero quieres aprovechar
-                cada momento para acompañar su comunicación
+                cada momento para acompañar su comunicación.
               </p>
             </div>
             <div
@@ -464,7 +442,7 @@
               <div class="text-2xl">📖</div>
               <p style="color: #5f5f5f">
                 <strong>Buscas recursos confiables,</strong> claros y fáciles de
-                usar en casa
+                usar en casa.
               </p>
             </div>
           </div>
@@ -489,7 +467,7 @@
           <p class="text-xl mb-8" style="color: #5f5f5f">
             "Mis Primeras Palabras" es un apoyo para estimular el lenguaje de tu
             bebé de forma natural, visual y respaldada por principios de
-            estimulación temprana
+            estimulación temprana.
           </p>
         </div>
       </section>
@@ -516,7 +494,7 @@
               </div>
               <h3 class="text-xl font-semibold text-white mb-3">Animales</h3>
               <p class="text-white opacity-90">
-                Aprende los nombres y sonidos de los animales favoritos
+                Aprende los nombres y sonidos de los animales favoritos.
               </p>
             </div>
             <div
@@ -532,7 +510,7 @@
               </div>
               <h3 class="text-xl font-semibold text-white mb-3">Colores</h3>
               <p class="text-white opacity-90">
-                Identifica y nombra los colores del mundo que lo rodea
+                Identifica y nombra los colores del mundo que lo rodea.
               </p>
             </div>
             <div
@@ -548,7 +526,7 @@
               </div>
               <h3 class="text-xl font-semibold text-white mb-3">Alimentos</h3>
               <p class="text-white opacity-90">
-                Amplía el vocabulario con alimentos de su día a día
+                Amplía el vocabulario con alimentos de su día a día.
               </p>
             </div>
             <div
@@ -564,14 +542,14 @@
               </div>
               <h3 class="text-xl font-semibold text-white mb-3">Números</h3>
               <p class="text-white opacity-90">
-                Primeros pasos en el reconocimiento de números básicos
+                Primeros pasos en el reconocimiento de números básicos.
               </p>
             </div>
           </div>
           <div class="text-center mt-8">
             <p class="text-lg" style="color: #5f5f5f">
               Y <strong>8 temas más</strong> diseñados para acompañar cada etapa
-              del desarrollo del lenguaje de tu bebé
+              del desarrollo del lenguaje de tu bebé.
             </p>
           </div>
         </div>
@@ -595,7 +573,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Que buscan una guía clara y confiable para estimular el lenguaje
-                de su bebé desde sus primeros años
+                de su bebé desde sus primeros años.
               </p>
             </div>
             <div
@@ -607,7 +585,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Que desean apoyar el desarrollo del lenguaje del bebé de forma
-                sencilla y estructurada
+                sencilla y estructurada.
               </p>
             </div>
             <div
@@ -619,7 +597,7 @@
               </h3>
               <p style="color: #5f5f5f">
                 Educadores y profesionales que buscan material visual claro para
-                apoyar la estimulación del lenguaje
+                apoyar la estimulación del lenguaje.
               </p>
             </div>
           </div>
@@ -627,8 +605,7 @@
       </section>
       <!-- Sección de Precio y CTA -->
       <section
-        class="w-full px-4 py-16 relative overflow-hidden"
-        style="background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%)"
+        class="w-full px-4 py-16 relative overflow-hidden section-gradient"
       >
         <div class="max-w-lg mx-auto text-center relative z-10">
           <div
@@ -727,7 +704,7 @@
                   </div>
                   <span class="text-sm sm:text-base" style="color: #334155"
                     >Libro digital completo en PDF, listo para usar en
-                    casa</span
+                    casa.</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
@@ -751,7 +728,7 @@
                   </div>
                   <span class="text-sm sm:text-base" style="color: #334155"
                     >12 temas clave para estimular el lenguaje desde los
-                    primeros meses</span
+                    primeros meses.</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
@@ -775,7 +752,7 @@
                   </div>
                   <span class="text-sm sm:text-base" style="color: #334155"
                     >Imágenes claras y reales que facilitan el reconocimiento y
-                    la palabra</span
+                    la palabra.</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
@@ -799,7 +776,7 @@
                   </div>
                   <span class="text-sm sm:text-base" style="color: #334155"
                     >Guía práctica para padres y cuidadores, sin
-                    tecnicismos</span
+                    tecnicismos.</span
                   >
                 </li>
                 <li class="flex items-start gap-3">
@@ -822,7 +799,7 @@
                     </svg>
                   </div>
                   <span class="text-sm sm:text-base" style="color: #334155"
-                    >Descarga inmediata en celular, tablet o computador</span
+                    >Descarga inmediata en celular, tablet o computador.</span
                   >
                 </li>
               </ul>
