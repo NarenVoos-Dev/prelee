@@ -24,7 +24,7 @@
       }
 
       .gradient-bg {
-        background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%);
+        background: linear-gradient(135deg, #fef7ed 0%, #fef7ed 100%);
       }
 
       .card-hover {
@@ -64,6 +64,46 @@
           transform: translateY(-10px) rotateY(-5deg);
         }
       }
+
+      /* New Pricing Card Styles */
+      @keyframes float-vertical {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      @keyframes pulse-soft {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.02);
+        }
+      }
+      .float-animation {
+        animation: float-vertical 3s ease-in-out infinite;
+      }
+      .cta-pulse {
+        animation: pulse-soft 2s ease-in-out infinite;
+      }
+      .price-badge {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      }
+      .section-gradient {
+        background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%);
+      }
+      .card-glow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+          0 10px 15px -3px rgba(0, 0, 0, 0.08),
+          0 20px 40px -10px rgba(147, 197, 253, 0.15);
+      }
+      .check-icon {
+        flex-shrink: 0;
+      }
     </style>
     <style>
       @view-transition {
@@ -72,14 +112,17 @@
     </style>
     <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   </head>
-  <body class="gradient-bg">
+  <body class="section-gradient">
     <!-- Promotional Banner -->
-    <div class="w-full text-center py-6 px-4" style="background-color: #5fcaac">
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-2">
+    <div
+      class="w-full text-center py-4 px-4 sticky top-0 z-50"
+      style="background-color: #5fcaac"
+    >
+      <h2 class="text-white text-xl md:text-3xl font-bold mb-1 md:mb-2">
         Obtén <strong>MIS PRIMERAS PALABRAS</strong> por solo
         <strong class="text-black font-black">$12 USD</strong>
       </h2>
-      <p class="text-gray-100 text-sm md:text-2xl font-semibold">
+      <p class="text-gray-100 text-xs md:text-2xl font-semibold">
         Disponible por tiempo limitado
       </p>
     </div>
@@ -92,8 +135,8 @@
             <div class="text-center md:text-left order-2 md:order-1">
               <h1
                 id="hero-title"
-                class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-                style="color: #2e2e2e; line-height: 1.2"
+                class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
+                style="color: #2e2e2e"
               >
                 Dale a tu bebé el mejor comienzo en el lenguaje
               </h1>
@@ -118,7 +161,8 @@
             <div class="mockup-container order-1 md:order-2">
               <div class="mockup-book relative">
                 <!-- Libro Principal -->
-                <div class="relative mx-auto" style="max-width: 400px">
+                <!-- Libro Principal -->
+                <div class="relative mx-auto w-full max-w-[400px]">
                   <svg viewbox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
                     <!-- Sombra del libro -->
                     <ellipse
@@ -227,8 +271,7 @@
                     /></svg
                   ><!-- Tablet flotante -->
                   <div
-                    class="absolute -right-8 top-20 transform rotate-6"
-                    style="width: 120px"
+                    class="absolute -right-4 md:-right-8 top-16 md:top-20 transform rotate-6 w-20 md:w-[120px]"
                   >
                     <svg
                       viewbox="0 0 120 160"
@@ -367,7 +410,7 @@
         </div>
       </section>
       <!-- Sección de Transición -->
-      <section class="w-full px-4 py-16 text-center">
+      <section class="w-full px-4 py-16 text-center section-gradient">
         <div class="max-w-4xl mx-auto">
           <h2
             id="transition-title"
@@ -397,8 +440,7 @@
           </div>
           <div class="space-y-4">
             <div
-              class="flex items-start gap-4 p-4 rounded-xl"
-              style="background-color: #fff6ee"
+              class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm"
             >
               <div class="text-2xl">😟</div>
               <p style="color: #5f5f5f">
@@ -417,8 +459,7 @@
               </p>
             </div>
             <div
-              class="flex items-start gap-4 p-4 rounded-xl"
-              style="background-color: #fff6ee"
+              class="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm"
             >
               <div class="text-2xl">📖</div>
               <p style="color: #5f5f5f">
@@ -430,7 +471,7 @@
         </div>
       </section>
       <!-- Sección de Solución -->
-      <section class="w-full px-4 py-16">
+      <section class="w-full px-4 py-16 section-gradient">
         <div class="max-w-4xl mx-auto text-center">
           <div
             class="inline-block px-6 py-2 rounded-full mb-6"
@@ -536,7 +577,7 @@
         </div>
       </section>
       <!-- Sección: Para Quién Es -->
-      <section class="w-full px-4 py-16">
+      <section class="w-full px-4 py-16" style="background-color: #ffffff">
         <div class="max-w-5xl mx-auto">
           <h2
             class="text-3xl md:text-4xl font-bold text-center mb-12"
@@ -586,65 +627,268 @@
       </section>
       <!-- Sección de Precio y CTA -->
       <section
-        class="w-full px-4 py-16"
+        class="w-full px-4 py-16 relative overflow-hidden"
         style="background: linear-gradient(135deg, #f2f8ff 0%, #fff6ee 100%)"
       >
-        <div class="max-w-3xl mx-auto text-center">
-          <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl">
-            <h2
-              id="price-title"
-              class="text-3xl md:text-4xl font-bold mb-4"
-              style="color: #2e2e2e"
+        <div class="max-w-lg mx-auto text-center relative z-10">
+          <div
+            class="relative w-full card-glow rounded-3xl p-6 sm:p-8 md:p-10"
+            id="main-card"
+            style="background-color: #ffffff"
+          >
+            <!-- Top decorative accent -->
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              Inversión en el futuro de tu bebé
-            </h2>
-            <div class="my-8">
               <div
-                class="text-5xl md:text-6xl font-bold mb-2"
-                style="color: #4a90e2"
+                class="w-20 h-20 rounded-full flex items-center justify-center shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+                "
               >
-                <span id="price-amount">$27</span>
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="currentColor"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
               </div>
-              <p class="text-lg" style="color: #5f5f5f">
-                Pago único · Acceso inmediato
+            </div>
+            <!-- Title Section -->
+            <div class="text-center mt-6 mb-6">
+              <h1
+                id="main-title"
+                class="text-xl sm:text-2xl md:text-2xl font-extrabold leading-tight mb-3"
+                style="color: #1e3a5f"
+              >
+                Una inversión en el desarrollo del lenguaje de tu bebé
+              </h1>
+              <p
+                id="subtitle"
+                class="text-sm sm:text-base font-semibold tracking-wide"
+                style="color: #64748b"
+              >
+                Pago único · Acceso inmediato · Uso de por vida
               </p>
             </div>
-            <ul class="text-left mb-8 space-y-3 max-w-md mx-auto">
-              <li class="flex items-center gap-3">
-                <span style="color: #7fc8a9; font-size: 1.5rem">✓</span>
-                <span style="color: #5f5f5f"
-                  >Libro digital completo en PDF</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <span style="color: #7fc8a9; font-size: 1.5rem">✓</span>
-                <span style="color: #5f5f5f"
-                  >5 módulos de estimulación progresiva</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <span style="color: #7fc8a9; font-size: 1.5rem">✓</span>
-                <span style="color: #5f5f5f"
-                  >Guía práctica para padres incluida</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <span style="color: #7fc8a9; font-size: 1.5rem">✓</span>
-                <span style="color: #5f5f5f"
-                  >Descarga en cualquier dispositivo</span
-                >
-              </li>
-            </ul>
-            <button
-              id="price-button"
-              class="w-full md:w-auto px-12 py-5 rounded-full text-white font-bold text-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
-              style="background-color: #4a90e2"
+            <!-- Price Section -->
+            <div class="text-center mb-6">
+              <div class="inline-block price-badge rounded-2xl px-6 py-4 mb-3">
+                <div class="flex items-center justify-center gap-3">
+                  <span
+                    id="regular-price"
+                    class="text-lg line-through opacity-60"
+                    style="color: #64748b"
+                    >$18 USD</span
+                  >
+                  <span
+                    id="current-price"
+                    class="text-4xl sm:text-5xl font-extrabold"
+                    style="color: #059669"
+                    >$12 USD</span
+                  >
+                </div>
+              </div>
+              <p
+                id="price-note"
+                class="text-sm font-medium"
+                style="color: #f59e0b"
+              >
+                ✨ Precio especial de lanzamiento por tiempo limitado
+              </p>
+            </div>
+            <!-- Benefits List -->
+            <div
+              class="rounded-2xl p-5 mb-6 text-left"
+              style="background-color: #f0fdf4"
             >
-              Comprar ahora
-            </button>
-            <p class="mt-6 text-sm" style="color: #5f5f5f">
-              🔒 Pago seguro · Acceso inmediato por email
-            </p>
+              <ul class="space-y-3" id="benefits-list">
+                <li class="flex items-start gap-3">
+                  <div
+                    class="check-icon w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                    style="background-color: #10b981"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-sm sm:text-base" style="color: #334155"
+                    >Libro digital completo en PDF, listo para usar en
+                    casa</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div
+                    class="check-icon w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                    style="background-color: #10b981"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-sm sm:text-base" style="color: #334155"
+                    >12 temas clave para estimular el lenguaje desde los
+                    primeros meses</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div
+                    class="check-icon w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                    style="background-color: #10b981"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-sm sm:text-base" style="color: #334155"
+                    >Imágenes claras y reales que facilitan el reconocimiento y
+                    la palabra</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div
+                    class="check-icon w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                    style="background-color: #10b981"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-sm sm:text-base" style="color: #334155"
+                    >Guía práctica para padres y cuidadores, sin
+                    tecnicismos</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div
+                    class="check-icon w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                    style="background-color: #10b981"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-sm sm:text-base" style="color: #334155"
+                    >Descarga inmediata en celular, tablet o computador</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- CTA Button -->
+            <div class="text-center mb-4">
+              <button
+                id="cta-button"
+                class="cta-pulse w-full sm:w-auto px-8 py-4 rounded-full text-white font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                style="
+                  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                "
+              >
+                🍼 Quiero ayudar a mi bebé a hablar
+              </button>
+            </div>
+            <!-- Trust Text -->
+            <div class="text-center">
+              <p
+                id="trust-text"
+                class="text-xs sm:text-sm flex flex-wrap items-center justify-center gap-2"
+                style="color: #94a3b8"
+              >
+                <span class="flex items-center gap-1">
+                  <svg
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    viewbox="0 0 24 24"
+                    style="color: #10b981"
+                  >
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"
+                    />
+                  </svg>
+                  Pago seguro
+                </span>
+                <span>·</span>
+                <span class="flex items-center gap-1">
+                  <svg
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    viewbox="0 0 24 24"
+                    style="color: #3b82f6"
+                  >
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                  Acceso inmediato por email
+                </span>
+                <span>·</span>
+                <span class="flex items-center gap-1">
+                  <svg
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    viewbox="0 0 24 24"
+                    style="color: #8b5cf6"
+                  >
+                    <path
+                      d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"
+                    />
+                  </svg>
+                  Compatible con cualquier dispositivo
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -656,9 +900,12 @@
             <h3 class="text-2xl font-bold mb-4" style="color: #2e2e2e">
               Garantía de satisfacción
             </h3>
+            <h4 class="text-lg font-semibold mb-3" style="color: #00a073">
+              Prueba Mis Primeras Palabras durante 7 días.
+            </h4>
             <p class="text-lg" style="color: #5f5f5f">
-              Si dentro de los primeros 7 días decides que el libro no es para
-              ti, te devolvemos el 100% de tu dinero. Sin preguntas.
+              Si sientes que el libro no es para ti o tu bebé, te devolvemos el
+              100% de tu dinero, sin preguntas.
             </p>
           </div>
         </div>
@@ -675,11 +922,11 @@
           <div class="space-y-4">
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
               <button
-                class="accordion-trigger w-full p-6 text-left flex justify-between items-center"
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
                 style="background-color: #f2f8ff"
               >
                 <span class="font-semibold text-lg" style="color: #2e2e2e"
-                  >¿A partir de qué edad puedo usar el libro?</span
+                  >¿A partir de qué edad es recomendado el libro?</span
                 >
                 <span class="text-2xl accordion-icon" style="color: #4a90e2"
                   >+</span
@@ -687,16 +934,16 @@
               </button>
               <div class="accordion-content px-6 pb-6">
                 <p style="color: #5f5f5f">
-                  El libro está diseñado para bebés desde los primeros meses
-                  hasta los 3 años. Los primeros módulos se enfocan en sonidos y
-                  balbuceos, mientras que los últimos trabajan vocabulario más
-                  amplio.
+                  El libro está diseñado para niños a partir de aproximadamente
+                  1 año, cuando comienzan a decir sus primeras palabras, y es
+                  ideal hasta los 3 años, etapa clave para ampliar vocabulario y
+                  comunicación.
                 </p>
               </div>
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
               <button
-                class="accordion-trigger w-full p-6 text-left flex justify-between items-center"
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
                 style="background-color: #f2f8ff"
               >
                 <span class="font-semibold text-lg" style="color: #2e2e2e"
@@ -708,19 +955,19 @@
               </button>
               <div class="accordion-content px-6 pb-6">
                 <p style="color: #5f5f5f">
-                  Inmediatamente después del pago, recibirás un correo
-                  electrónico con el enlace de descarga del PDF. Podrás
-                  guardarlo en tu celular, tablet o computadora.
+                  Una vez confirmado el pago, recibirás un correo electrónico
+                  con el enlace de descarga. Podrás acceder al libro de forma
+                  inmediata y usarlo cuando quieras.
                 </p>
               </div>
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
               <button
-                class="accordion-trigger w-full p-6 text-left flex justify-between items-center"
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
                 style="background-color: #f2f8ff"
               >
                 <span class="font-semibold text-lg" style="color: #2e2e2e"
-                  >¿Necesito imprimirlo o puedo usarlo en digital?</span
+                  >¿Debo imprimir el libro o puedo usarlo en digital?</span
                 >
                 <span class="text-2xl accordion-icon" style="color: #4a90e2"
                   >+</span
@@ -728,15 +975,16 @@
               </button>
               <div class="accordion-content px-6 pb-6">
                 <p style="color: #5f5f5f">
-                  Puedes usarlo como prefieras. El formato digital es perfecto
-                  para mostrarle las imágenes desde tu tablet o celular. Si
-                  prefieres, también puedes imprimirlo en casa.
+                  Puedes usarlo 100% en formato digital desde tu celular, tablet
+                  o computador. <br />
+                  Si lo prefieres, también puedes imprimirlo en casa para usarlo
+                  de forma física.
                 </p>
               </div>
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
               <button
-                class="accordion-trigger w-full p-6 text-left flex justify-between items-center"
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
                 style="background-color: #f2f8ff"
               >
                 <span class="font-semibold text-lg" style="color: #2e2e2e"
@@ -748,19 +996,19 @@
               </button>
               <div class="accordion-content px-6 pb-6">
                 <p style="color: #5f5f5f">
-                  Con 10-15 minutos diarios es suficiente. Lo importante es la
-                  constancia y la interacción amorosa. No se trata de
-                  "estudiar", sino de jugar y comunicarse juntos.
+                  Con 5 a 10 minutos diarios es suficiente. <br />
+                  El enfoque es acompañar, señalar, nombrar y repetir palabras
+                  en momentos cotidianos, sin presión ni rutinas largas.
                 </p>
               </div>
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
               <button
-                class="accordion-trigger w-full p-6 text-left flex justify-between items-center"
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
                 style="background-color: #f2f8ff"
               >
                 <span class="font-semibold text-lg" style="color: #2e2e2e"
-                  >¿Está avalado por especialistas?</span
+                  >¿Necesito conocimientos previos para usarlo?</span
                 >
                 <span class="text-2xl accordion-icon" style="color: #4a90e2"
                   >+</span
@@ -768,10 +1016,29 @@
               </button>
               <div class="accordion-content px-6 pb-6">
                 <p style="color: #5f5f5f">
-                  Sí. El contenido está basado en principios de estimulación
-                  temprana respaldados por investigación en desarrollo del
-                  lenguaje infantil y ha sido revisado por profesionales en
-                  pedagogía.
+                  No. El libro está pensado para que cualquier padre, madre o
+                  cuidador pueda usarlo fácilmente, sin conocimientos técnicos
+                  ni experiencia previa.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <button
+                class="accordion-trigger w-full p-6 text-left flex justify-between items-center gap-4"
+                style="background-color: #f2f8ff"
+              >
+                <span class="font-semibold text-lg" style="color: #2e2e2e"
+                  >¿Está basado en estimulación del lenguaje?</span
+                >
+                <span class="text-2xl accordion-icon" style="color: #4a90e2"
+                  >+</span
+                >
+              </button>
+              <div class="accordion-content px-6 pb-6">
+                <p style="color: #5f5f5f">
+                  Sí. El contenido está inspirado en principios de estimulación
+                  del lenguaje temprano, enfocados en el desarrollo progresivo
+                  del vocabulario y la comunicación en niños pequeños.
                 </p>
               </div>
             </div>
